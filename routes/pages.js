@@ -34,7 +34,7 @@ router.get('/friends', authController.isLoggedIn,(req, res) => {
         res.redirect('/login');
     }else{
         console.log(friendsController.showFriends(req.user.id));
-        friendsController.showFriends(req.user.id,(result)=>{
+        friendsController.showFriends(req.user.id).then((result)=> {
             res.render('friends',result);
         });
     }
