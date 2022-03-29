@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\views"
   ],
-  "SelectedNode": "\\C:\\Users\\mm\\source\\repos\\UniData",
+  "SelectedNode": "\\views\\profile.ejs",
   "PreviewInSolutionExplorer": false
 }
