@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\views"
   ],
+  "SelectedNode": "\\views\\profile.ejs",
   "PreviewInSolutionExplorer": false
 }
