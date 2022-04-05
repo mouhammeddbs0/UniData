@@ -310,7 +310,67 @@
             }
             </pre>
         </div>
-   
+        <div class="box-editor">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Disabled</a>
+                </li>
+            </ul>
+            <pre data-enlighter-language="less" data-enlighter-title="Core/Defaut" data-enlighter-group="mygroup1">
+            // buttons used in codegroups + toolbarwjkdcgaisudcguidsgcidcgiysdvc yisxvy
+            .enlighter-btn{
+                display: inline-block;
+                margin: 0px 5px 0px 5px;
+                padding: 3px 5px 3px 5px;
+                border: solid 1px #333333;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+
+            // buttons
+            .enlighter-btn-raw{
+                background-image: data-uri('icons/enlighter_code.svg');
+            }
+
+            .enlighter-btn-window{
+                background-image: data-uri('icons/enlighter_rawcode.svg');
+            }
+
+            .enlighter-btn-website{
+                background-image: data-uri('icons/enlighter_icon_white.svg');
+            }
+        </pre>
+            <!-- Code to highlight -->
+            <pre data-enlighter-language="less" data-enlighter-title="Classic Theme" data-enlighter-group="mygroup1">
+            // line hover color
+            &.enlighter-hover{
+                ul.enlighter li:hover{
+                    border: none;
+                    background-color: #ddf0dd;
+                }
+                ol.enlighter li:hover{
+                    border: none;
+                    border-left: solid 4px #52ce52;
+                    background-color: #ddf0dd;
+                }
+            }
+
+            // Inline specific styles
+            &amp;.enlighter-v-inline span.enlighter{
+                background-color: transparent;
+                border: none;
+            }
+            </pre>
+        </div>
     </main>
 </div>
 
