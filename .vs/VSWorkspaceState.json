@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\controllers",
     "\\views"
   ],
   "SelectedNode": "\\views\\profile.ejs",
