@@ -3,34 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style type="text/css">
-        body {
-            color: #ddd;
-            background-color: #121212;
-        }
-
-        .card {
-            background-color: #282828;
-        }
-
-        .card-header {
-            border-bottom-color: #404040;
-        }
-
-        input[type="email"], input[type="password"] {
-            border-color: #ddd;
-            background-color: #ddd;
-            height: calc(1.1em + 0.7rem + 2px);
-            font-size: 90%;
-        }
-
-        input[type=email]:focus, input[type="password"]:focus {
-            background-color: #ddd;
-            border-color: lightblue;
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/login.css">
     <title>UniData - Log In</title>
 </head>
 <body>
@@ -43,7 +17,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h6>Log In</h6>
+            <b>Log In</b>
         </div>
         <div class="card-body">
             <form action="/auth/login" method="POST">
@@ -62,7 +36,7 @@
                     <br>
                     <button type="submit" class="btn btn-primary btn-sm">Log in</button>
                 </div>
-                <div class="text-center fs-6"><br> <a href="#">Forget password?</a> or <a href="/register">Sign Up</a>
+                <div class="text-center fs-8"><br> <a href="#">Forget password?</a> or <a href="/register">Sign Up</a>
                 </div>
             </form>
         </div>
@@ -83,8 +57,6 @@
     <%}%>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 </body>
 </html>

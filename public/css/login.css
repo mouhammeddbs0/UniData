@@ -1,0 +1,28 @@
+body {
+    color: #ddd;
+    background-color: #121212;
+}
+
+.card {
+    background-color: #282828;
+}
+
+.card-header {
+    border-bottom-color: #404040;
+}
+
+input[type="email"], input[type="password"] {
+    border-color: #ddd;
+    background-color: #ddd;
+    height: calc(1.1em + 0.7rem + 2px);
+    font-size: 90%;
+    margin-bottom: 12px;
+}
+
+input[type=email]:focus, input[type="password"]:focus {
+    background-color: #ddd;
+    border-color: lightblue;
+}
+label {
+    margin-bottom: 2px;
+}
