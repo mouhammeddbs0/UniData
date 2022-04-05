@@ -19,7 +19,7 @@ exports.login = async (req, res) => {
             if (!results || !(await bcrypt.compare(password, results[0].password))) {
                 console.log(bcrypt.compareSync(password, results[0].password));
                 res.status(401).render('login', {
-                    message: 'Email or Password is incorrect'
+                    message: 'Password is incorrect'
                 })
             } else {
                 const id = results[0].id;
