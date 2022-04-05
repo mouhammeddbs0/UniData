@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {promisify} = require('util');
 
-
 exports.login = async (req, res) => {
     try {
         const {email, password} = req.body;
