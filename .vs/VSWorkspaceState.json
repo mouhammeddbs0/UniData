@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\controllers",
+    "\\public",
+    "\\public\\css",
+    "\\views"
   ],
-  "SelectedNode": "\\C:\\Users\\mm\\source\\repos\\UniData",
+  "SelectedNode": "\\controllers",
   "PreviewInSolutionExplorer": false
 }
