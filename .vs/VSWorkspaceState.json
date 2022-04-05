@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\controllers",
+    "\\public",
+    "\\public\\css",
     "\\views"
   ],
-  "SelectedNode": "\\views\\profile.ejs",
+  "SelectedNode": "\\controllers\\auth.js",
   "PreviewInSolutionExplorer": false
 }
