@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\controllers",
     "\\public",
-    "\\public\\css",
-    "\\views"
+    "\\routes"
   ],
-  "SelectedNode": "\\controllers\\auth.js",
+  "SelectedNode": "\\.env",
   "PreviewInSolutionExplorer": false
 }

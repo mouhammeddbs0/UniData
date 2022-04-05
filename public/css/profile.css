@@ -9,14 +9,19 @@ body {
     margin-left: 24%;
     margin-top: 4%;
     width: 55%;
+    height 100%;
 }
 .img{
     margin-left:40%;
     padding-top:5%;
 }
-hr{
-    background-color:#fff;
+hr {
+    background-color: #7386D5;
 }
 .card-title{
     padding-top:3%;
+}
+.gg {
+    background-color: #282828;
+    color:black;
 }
