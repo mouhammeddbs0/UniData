@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\routes"
+    "\\routes",
+    "\\views"
   ],
-  "SelectedNode": "\\.env",
+  "SelectedNode": "\\views\\profile.ejs",
   "PreviewInSolutionExplorer": false
 }
