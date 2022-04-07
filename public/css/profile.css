@@ -19,6 +19,7 @@ hr {
     background-color: #7386D5;
 }
 .card-title{
+<<<<<<< Updated upstream
     padding-top:3%;
 }
 .gg {
@@ -28,4 +29,9 @@ hr {
     margin-left:85%;
     
     
+=======
+    text-align:center;
+    margin-right:65%;
+    padding-bottom:5%;
+>>>>>>> Stashed changes
 }
