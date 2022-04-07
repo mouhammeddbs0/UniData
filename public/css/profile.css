@@ -1,26 +1,31 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
+    text-align: -webkit-center;
     background-color: #121212;
     color: #fff;
     font-family: 'Poppins', sans-serif;
 }
 .card {
+    text-align:left;
+    min-width:350px;
     background-color: #282828;
-    margin-left: 24%;
     margin-top: 4%;
     width: 55%;
-    height 100%;
+    height: 100%;
 }
 .img{
-    margin-left:40%;
+    text-align:center;
+    width:100px;
+    height:100px;
     padding-top:5%;
 }
 hr {
     background-color: #7386D5;
 }
+<<<<<<< HEAD
 .card-title{
 <<<<<<< Updated upstream
-    padding-top:3%;
+    padding-top:5%;
 }
 .gg {
     background-color: #282828; color:white;
@@ -34,4 +39,19 @@ hr {
     margin-right:65%;
     padding-bottom:5%;
 >>>>>>> Stashed changes
+=======
+.card-title {
+    padding-top: 3%;
+    text-align: center;
+}
+.list-group {
+    
+}
+li {
+    color: white;
+    background-color: #282828;
+>>>>>>> 0fc411e296b8571701447cacb01cecab86808246
+}
+b{
+    margin-left:5px;
 }
