@@ -29,12 +29,25 @@ body {
 .card-text {
     margin: 5px;
 }
+.card-skills {
+    background-color: #1a1616;
+}
 .edit-pro {
-    text-align:right;
+    text-align: right;
 }
 .edit-pro button{
     width:25px;
     height:25px;
     padding: 0px 0px;
     margin:5px;
+}
+.header-skill {
+    background-color: #35353c;
+    color: white;
+    padding: 5px 0px;
+    padding-left: 5px;
+}
+.skill {
+    background-color: #6c757d;
+    color: white;
 }
