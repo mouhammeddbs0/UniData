@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\controllers",
     "\\public",
-    "\\public\\css",
     "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\public\\css\\profile.css",
+  "SelectedNode": "\\views\\friends.ejs",
   "PreviewInSolutionExplorer": false
 }
