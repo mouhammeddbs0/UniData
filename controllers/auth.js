@@ -2,6 +2,7 @@ const db = require("../db/db.js")
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {promisify} = require('util');
+const { use } = require("../routes/pages.js");
 
 exports.login = async (req, res) => {
     try {
@@ -20,7 +21,6 @@ exports.login = async (req, res) => {
                 })
             } else {
                 if (!(await bcrypt.compare(password, results[0].password))) {
-                    console.log(bcrypt.compareSync(password, results[0].password));
                     res.status(401).render('login', {
                         message: 'Password is incorrect'
                     })
@@ -52,7 +52,6 @@ exports.login = async (req, res) => {
 }
 
 exports.register = async (req, res) => {
-    console.log(req.body);
 
     const {name, email, password, passwordConfirm} = req.body;
     if (!email || !password || !name || !passwordConfirm) {
@@ -129,6 +128,7 @@ exports.isLoggedIn = async (req, res, next) => {
                 }
 
                 req.user = JSON.parse(JSON.stringify(result[0]));
+                console.log(req.user);
                 return next();
 
             });

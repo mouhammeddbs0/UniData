@@ -1,0 +1,411 @@
+                                                                                                                                                                                                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/enlighterjs.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <title>UniData - Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark py-0">
+        <button id="sidebarCollapse" class="btn btn-dark d-inline-block " type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+            <b>UniData</b>
+        </button>
+
+        <ul>
+            <% if (user){ %>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>
+                    Profile
+                </a>
+            </li>
+            <% }else{ %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <%}%>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar  -->
+            <nav class="sidebar-sticky sidebar" id="sidebar" style="width: 15%;min-width: 185px; padding: 10px;">
+                <div id="dismiss" style="margin-right:4px;">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <div style="width: 12%;min-width: 160px;" class="sidebar-header rounded">
+                    <h5>UniDate</h5>
+                </div>
+
+
+                <ul class="nav flex-column" style="font-size: 16px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-home">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            Home <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-bar-chart-2">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                            Rooms
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/friends">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-users">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Friends
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-settings">
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="feather feather-settings" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z" />
+                                <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+
+
+            </nav>
+        </div>
+        <!-- Page Content  -->
+        <main id="content">
+            <div class="box-editor">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <pre data-enlighter-language="less" data-enlighter-title="Core/Defaut" data-enlighter-group="mygroup1">
+            // buttons used in codegroups + toolbarwjkdcgaisudcguidsgcidcgiysdvc yisxvy
+            .enlighter-btn{
+                display: inline-block;
+                margin: 0px 5px 0px 5px;
+                padding: 3px 5px 3px 5px;
+                border: solid 1px #333333;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+
+            // buttons
+            .enlighter-btn-raw{
+                background-image: data-uri('icons/enlighter_code.svg');
+            }
+
+            .enlighter-btn-window{
+                background-image: data-uri('icons/enlighter_rawcode.svg');
+            }
+
+            .enlighter-btn-website{
+                background-image: data-uri('icons/enlighter_icon_white.svg');
+            }
+        </pre>
+                <!-- Code to highlight -->
+                <pre data-enlighter-language="less" data-enlighter-title="Classic Theme" data-enlighter-group="mygroup1">
+            // line hover color
+            &.enlighter-hover{
+                ul.enlighter li:hover{
+                    border: none;
+                    background-color: #ddf0dd;
+                }
+                ol.enlighter li:hover{
+                    border: none;
+                    border-left: solid 4px #52ce52;
+                    background-color: #ddf0dd;
+                }
+            }
+
+            // Inline specific styles
+            &amp;.enlighter-v-inline span.enlighter{
+                background-color: transparent;
+                border: none;
+            }
+            </pre>
+            </div>
+            <div class="box-editor">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <pre data-enlighter-language="less" data-enlighter-title="Core/Defaut" data-enlighter-group="mygroup1">
+            // buttons used in codegroups + toolbarwjkdcgaisudcguidsgcidcgiysdvc yisxvy
+            .enlighter-btn{
+                display: inline-block;
+                margin: 0px 5px 0px 5px;
+                padding: 3px 5px 3px 5px;
+                border: solid 1px #333333;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+
+            // buttons
+            .enlighter-btn-raw{
+                background-image: data-uri('icons/enlighter_code.svg');
+            }
+
+            .enlighter-btn-window{
+                background-image: data-uri('icons/enlighter_rawcode.svg');
+            }
+
+            .enlighter-btn-website{
+                background-image: data-uri('icons/enlighter_icon_white.svg');
+            }
+        </pre>
+                <!-- Code to highlight -->
+                <pre data-enlighter-language="less" data-enlighter-title="Classic Theme" data-enlighter-group="mygroup1">
+            // line hover color
+            &.enlighter-hover{
+                ul.enlighter li:hover{
+                    border: none;
+                    background-color: #ddf0dd;
+                }
+                ol.enlighter li:hover{
+                    border: none;
+                    border-left: solid 4px #52ce52;
+                    background-color: #ddf0dd;
+                }
+            }
+
+            // Inline specific styles
+            &amp;.enlighter-v-inline span.enlighter{
+                background-color: transparent;
+                border: none;
+            }
+            </pre>
+            </div>
+            <div class="box-editor">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <pre data-enlighter-language="less" data-enlighter-title="Core/Defaut" data-enlighter-group="mygroup2">
+            // buttons used in codegroups + toolbarwjkdcgaisudcguidsgcidcgiysdvc yisxvy
+            .enlighter-btn{
+                display: inline-block;
+                margin: 0px 5px 0px 5px;
+                padding: 3px 5px 3px 5px;
+                border: solid 1px #333333;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+
+            // buttons
+            .enlighter-btn-raw{
+                background-image: data-uri('icons/enlighter_code.svg');
+            }
+
+            .enlighter-btn-window{
+                background-image: data-uri('icons/enlighter_rawcode.svg');
+            }
+
+            .enlighter-btn-website{
+                background-image: data-uri('icons/enlighter_icon_white.svg');
+            }
+        </pre>
+                <!-- Code to highlight -->
+                <pre data-enlighter-language="less" data-enlighter-title="Classic Theme" data-enlighter-group="mygroup1">
+            // line hover color
+            &.enlighter-hover{
+                ul.enlighter li:hover{
+                    border: none;
+                    background-color: #ddf0dd;
+                }
+                ol.enlighter li:hover{
+                    border: none;
+                    border-left: solid 4px #52ce52;
+                    background-color: #ddf0dd;
+                }
+            }
+
+            // Inline specific styles
+            &amp;.enlighter-v-inline span.enlighter{
+                background-color: transparent;
+                border: none;
+            }
+            </pre>
+            </div>
+            <div class="box-editor">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <pre data-enlighter-language="less" data-enlighter-title="Core/Defaut" data-enlighter-group="mygroup1">
+            // buttons used in codegroups + toolbarwjkdcgaisudcguidsgcidcgiysdvc yisxvy
+            .enlighter-btn{
+                display: inline-block;
+                margin: 0px 5px 0px 5px;
+                padding: 3px 5px 3px 5px;
+                border: solid 1px #333333;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+
+            // buttons
+            .enlighter-btn-raw{
+                background-image: data-uri('icons/enlighter_code.svg');
+            }
+
+            .enlighter-btn-window{
+                background-image: data-uri('icons/enlighter_rawcode.svg');
+            }
+
+            .enlighter-btn-website{
+                background-image: data-uri('icons/enlighter_icon_white.svg');
+            }
+        </pre>
+                <!-- Code to highlight -->
+                <pre data-enlighter-language="less" data-enlighter-title="Classic Theme" data-enlighter-group="mygroup1">
+            // line hover color
+            &.enlighter-hover{
+                ul.enlighter li:hover{
+                    border: none;
+                    background-color: #ddf0dd;
+                }
+                ol.enlighter li:hover{
+                    border: none;
+                    border-left: solid 4px #52ce52;
+                    background-color: #ddf0dd;
+                }
+            }
+
+            // Inline specific styles
+            &amp;.enlighter-v-inline span.enlighter{
+                background-color: transparent;
+                border: none;
+            }
+            </pre>
+            </div>
+        </main>
+    </div>
+
+    <!-- EnlighterJS -->
+    <script type="text/javascript" src="js/enlighterjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js"></script>
+    <!-- Init Code -->
+    <script type="text/javascript">
+        // - highlight all pre + code tags (CSS3 selectors)
+        // - use javascript as default language
+        // - use theme "enlighter" as default theme
+        // - replace tabs with 2 spaces
+        EnlighterJS.init('pre', 'code', {
+            language: 'javascript',
+            theme: 'dracula',
+            indent: 1
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="/js/bootstrp.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+</body>
+
+</html>

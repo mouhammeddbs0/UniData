@@ -4,7 +4,18 @@ const friendsController = require("../controllers/friends");
 const router = express.Router();
 
 router.get('/', authController.isLoggedIn, (req, res) => {
-    res.render('index', {
+    if (req.user) {
+        res.render('home', {
+            user: req.user
+        });
+    } else {
+        res.render('index');
+    }
+    
+});
+
+router.get('/home', authController.isLoggedIn, (req, res) => {
+    res.render('home', {
         user: req.user
     });
 });
@@ -18,7 +29,6 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/profile', authController.isLoggedIn, (req, res) => {
-    console.log({user:req.user});
     if (req.user) {
         res.render('profile',{
             user:req.user
@@ -29,7 +39,7 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
 
 })
 
-router.get('/friends', authController.isLoggedIn,(req, res) => {
+router.get('/friends', authController.isLoggedIn, (req, res) => {
     if (!req.user) {
         res.redirect('/login');
     }else{
