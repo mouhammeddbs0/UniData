@@ -3,9 +3,10 @@
     "",
     "\\controllers",
     "\\public",
+    "\\public\\css",
     "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\views\\friends.ejs",
+  "SelectedNode": "\\views\\profile.ejs",
   "PreviewInSolutionExplorer": false
 }

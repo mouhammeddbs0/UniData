@@ -1,7 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 body {
-    text-align: -webkit-center ;
+    text-align: -moz-center;
+    text-align: -webkit-center;
     background-color: #121212;
     color: #fff;
     font-family: 'Poppins', sans-serif;
