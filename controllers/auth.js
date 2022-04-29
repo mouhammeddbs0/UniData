@@ -2,7 +2,7 @@ const db = require("../db/db.js")
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {promisify} = require('util');
-const { use } = require("../routes/pages.js");
+const router = require("../routes/pages.js");
 
 exports.login = async (req, res) => {
     try {

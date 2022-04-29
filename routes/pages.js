@@ -1,6 +1,6 @@
 const express = require('express');
 const authController = require('../controllers/auth');
-const friendsController = require("../controllers/friends");
+const friendsController = require("../controllers/friends");  
 const router = express.Router();
 
 router.get('/', authController.isLoggedIn, (req, res) => {
